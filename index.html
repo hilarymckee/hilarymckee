@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hilary McKee | Therapy Resources | Vancouver, BC</title>
+<meta name="description" content="Plain-language guides to EMDR, psychedelic-assisted therapy, IFS, somatic therapy, and couples counselling. Written by an emerging psychotherapist in Vancouver, BC.">
+<meta name="keywords" content="EMDR therapy Vancouver, psychedelic assisted therapy Canada, IFS therapy, somatic therapy Vancouver, couples counselling Vancouver, online therapy BC, trauma therapist Vancouver">
+<link rel="canonical" href="https://hilarymckee.ca">
+<meta property="og:title" content="Hilary McKee | Therapy Resources | Vancouver, BC">
+<meta property="og:description" content="Plain-language guides to EMDR, psychedelic-assisted therapy, IFS, somatic therapy, and couples counselling.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://hilarymckee.ca">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Hilary McKee",
+  "jobTitle": "Emerging Psychotherapist",
+  "description": "Emerging psychotherapist and writer sharing resources on EMDR, psychedelic-assisted therapy, IFS, somatic therapy and couples counselling.",
+  "url": "https://hilarymckee.ca",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Vancouver",
+    "addressRegion": "BC",
+    "addressCountry": "CA"
+  },
+  "knowsAbout": ["EMDR Therapy","Somatic Therapy","Internal Family Systems","Psychedelic-Assisted Therapy","Couples Counselling","Nervous System Regulation","Attachment Theory"]
+}
+</script>
+<link rel="stylesheet" href="css/style.css">
+<style>
+  /* ── PAGE OFFSET ── */
+  main { padding-top: var(--nav-height); }
+
+  /* ── HERO ── */
+  .hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: calc(100vh - var(--nav-height));
+  }
+  .hero-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5rem 4rem 5rem 3.5rem;
+    background: var(--cream);
+    position: relative;
+  }
+  .hero-left::after {
+    content: '';
+    position: absolute;
+    right: 0; top: 12%; bottom: 12%;
+    width: 0.5px;
+    background: var(--border);
+  }
+  .hero-h1 {
+    font-size: clamp(36px, 4.5vw, 58px);
+    margin-bottom: 1.75rem;
+    letter-spacing: -0.02em;
+  }
+  .hero-h1 em { font-style: italic; color: var(--terra); }
+  .hero-body {
+    font-size: 14px;
+    color: var(--text-body);
+    line-height: 1.85;
+    max-width: 360px;
+    margin-bottom: 2.5rem;
+  }
+  .hero-right {
+    position: relative;
+    overflow: hidden;
+    background: var(--cream-dark);
+  }
+  .hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: saturate(0.8) brightness(0.92);
+  }
+  .hero-img-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(to right, rgba(250,246,240,0.12) 0%, transparent 35%),
+      linear-gradient(to top, rgba(24,14,8,0.45) 0%, transparent 45%);
+  }
+  .hero-coming {
+    position: absolute;
+    bottom: 2.5rem;
+    left: 2rem;
+    right: 2rem;
+    border: 0.5px solid rgba(216,208,192,0.4);
+    padding: 1.25rem 1.5rem;
+    background: rgba(24,14,8,0.72);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+  .hero-coming-label {
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--terra-light);
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 400;
+  }
+  .hero-coming-label::before {
+    content: '';
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--terra-light);
+    opacity: 0.6;
+    display: inline-block;
+  }
+  .hero-coming-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 15px;
+    color: #D8DCC0;
+    line-height: 1.55;
+    margin-bottom: 0.4rem;
+    font-weight: 300;
+  }
+  .hero-coming-sub {
+    font-size: 11px;
+    color: rgba(216,220,192,0.5);
+    line-height: 1.6;
+  }
+
+  /* ── BELIEF ── */
+  .belief {
+    padding: 5rem 3.5rem;
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 4rem;
+    background: var(--cream-dark);
+    border-top: 0.5px solid var(--border);
+    border-bottom: 0.5px solid var(--border);
+    align-items: start;
+  }
+  .belief-label {
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    padding-top: 8px;
+    font-weight: 400;
+  }
+  .belief-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(22px, 2.8vw, 34px);
+    font-weight: 300;
+    color: var(--text-dark);
+    line-height: 1.4;
+  }
+  .belief-text em { font-style: italic; color: var(--terra); }
+
+  /* ── ABOUT ── */
+  .about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 580px;
+    background: var(--forest);
+    position: relative;
+    overflow: hidden;
+  }
+  .about::before {
+    content: '';
+    position: absolute;
+    bottom: -80px; right: -80px;
+    width: 450px; height: 450px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(184,90,56,0.1) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .about-text {
+    padding: 5rem 4rem 5rem 3.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+  }
+  .about-h2 {
+    font-size: clamp(26px, 3.2vw, 40px);
+    color: var(--olive-pale);
+    margin-bottom: 1.75rem;
+    line-height: 1.15;
+  }
+  .about-h2 em { font-style: italic; color: var(--terra-light); }
+  .about-body {
+    font-size: 13px;
+    color: #8AAA80;
+    line-height: 1.9;
+    margin-bottom: 2rem;
+  }
+  .about-link {
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--olive-pale);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    border-bottom: 0.5px solid #3A5028;
+    padding-bottom: 3px;
+    text-decoration: none;
+    transition: color 0.2s, border-color 0.2s;
+    width: fit-content;
+  }
+  .about-link::after { content: '→'; }
+  .about-link:hover { color: var(--terra-light); border-color: var(--terra-light); }
+  .about-img-wrap {
+    position: relative;
+    overflow: hidden;
+  }
+  .about-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: saturate(0.6) brightness(0.65);
+    mix-blend-mode: luminosity;
+  }
+  .about-img-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(to right, rgba(30,46,24,0.75) 0%, rgba(30,46,24,0.2) 50%, transparent 100%),
+      linear-gradient(to top, rgba(24,14,8,0.5) 0%, transparent 40%);
+  }
+  .about-img-caption {
+    position: absolute;
+    bottom: 1.75rem; right: 1.75rem;
+    font-size: 10px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: rgba(216,220,192,0.2);
+  }
+
+  /* ── RESOURCES ── */
+  .resources {
+    padding: 5rem 3.5rem;
+    background: var(--cream);
+    border-top: 0.5px solid var(--border);
+  }
+  .resources-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    padding-bottom: 2.5rem;
+    border-bottom: 0.5px solid var(--border);
+    align-items: end;
+  }
+  .resources-h2 {
+    font-size: clamp(24px, 3vw, 36px);
+    margin-top: 0.75rem;
+  }
+  .resources-h2 em { font-style: italic; }
+  .resources-intro {
+    font-size: 13px;
+    color: var(--text-body);
+    line-height: 1.8;
+    margin-bottom: 1rem;
+  }
+  .resources-link {
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--terra);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: gap 0.2s;
+  }
+  .resources-link::after { content: '→'; }
+  .resources-link:hover { gap: 8px; color: var(--terra-light); }
+
+  .blog-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 1px;
+    background: var(--border);
+  }
+  .blog-card {
+    background: var(--cream);
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: inherit;
+    transition: background 0.2s;
+  }
+  .blog-card:hover { background: var(--cream-mid); }
+  .blog-card.featured { background: var(--cream-dark); }
+  .blog-card.featured:hover { background: var(--cream-mid); }
+  .blog-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    filter: saturate(0.78);
+    transition: filter 0.3s;
+  }
+  .blog-card.featured .blog-img { height: 210px; }
+  .blog-card:hover .blog-img { filter: saturate(0.95); }
+  .blog-body { padding: 1.75rem; flex: 1; display: flex; flex-direction: column; }
+  .blog-tag {
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--terra);
+    margin-bottom: 0.75rem;
+    font-weight: 400;
+  }
+  .blog-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 19px;
+    font-weight: 400;
+    color: var(--text-dark);
+    line-height: 1.25;
+    margin-bottom: 0.6rem;
+    flex: 1;
+  }
+  .blog-card.featured .blog-title { font-size: 23px; }
+  .blog-title em { font-style: italic; }
+  .blog-excerpt {
+    font-size: 12px;
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-bottom: 1rem;
+  }
+  .blog-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+  }
+  .blog-meta { font-size: 10px; color: var(--text-muted); }
+  .blog-read {
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--terra);
+    font-weight: 400;
+  }
+
+  /* ── QUOTE ── */
+  .quote-section {
+    background: var(--olive);
+    padding: 7rem 3.5rem;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+  }
+  .quote-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 80% 60% at 50% 110%, rgba(184,90,56,0.15) 0%, transparent 65%);
+  }
+  .quote-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.06;
+    filter: saturate(0) brightness(0.4);
+  }
+  .quote-inner {
+    position: relative;
+    max-width: 580px;
+    margin: 0 auto;
+  }
+  .quote-mark {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 90px;
+    color: #3A4820;
+    line-height: 0.4;
+    display: block;
+    margin-bottom: 1.75rem;
+  }
+  .quote-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(22px, 2.8vw, 32px);
+    font-weight: 300;
+    font-style: italic;
+    color: var(--olive-pale);
+    line-height: 1.45;
+    margin-bottom: 1.5rem;
+  }
+  .quote-text em { font-style: normal; color: var(--terra-light); }
+  .quote-attr {
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #4A5A30;
+    font-weight: 400;
+  }
+
+  /* ── NEWSLETTER ── */
+  .newsletter {
+    padding: 5rem 3.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    background: var(--cream-dark);
+    border-top: 0.5px solid var(--border);
+    align-items: center;
+  }
+  .newsletter-h2 {
+    font-size: clamp(24px, 2.8vw, 34px);
+    margin-bottom: 0.75rem;
+    margin-top: 0.75rem;
+  }
+  .newsletter-h2 em { font-style: italic; color: var(--terra); }
+  .newsletter-body {
+    font-size: 13px;
+    color: var(--text-body);
+    line-height: 1.8;
+  }
+  .newsletter-form { display: flex; flex-direction: column; gap: 14px; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .form-note { font-size: 11px; color: var(--text-muted); line-height: 1.6; }
+
+  /* ── MOBILE ── */
+  @media (max-width: 900px) {
+    .hero { grid-template-columns: 1fr; min-height: auto; }
+    .hero-right { height: 50vw; min-height: 280px; }
+    .hero-left { padding: 4rem 1.5rem 3rem; }
+    .hero-left::after { display: none; }
+    .belief { grid-template-columns: 1fr; gap: 1rem; padding: 3.5rem 1.5rem; }
+    .about { grid-template-columns: 1fr; }
+    .about-img-wrap { height: 50vw; min-height: 260px; }
+    .about-text { padding: 4rem 1.5rem 3rem; }
+    .resources { padding: 4rem 1.5rem; }
+    .resources-header { grid-template-columns: 1fr; gap: 1rem; }
+    .blog-grid { grid-template-columns: 1fr; }
+    .newsletter { grid-template-columns: 1fr; gap: 2.5rem; padding: 4rem 1.5rem; }
+    .form-row { grid-template-columns: 1fr; }
+    .quote-section { padding: 5rem 1.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <a href="index.html" class="nav-logo">Hilary McKee</a>
+  <div class="nav-links">
+    <a href="about.html" class="nav-link">About</a>
+    <a href="resources.html" class="nav-link">Resources</a>
+    <a href="contact.html" class="nav-link">Stay in touch</a>
+  </div>
+  <div class="nav-hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-left">
+      <p class="eyebrow">Vancouver, BC</p>
+      <h1 class="hero-h1">A space to learn<br>about healing —<br>and <em>find your way</em><br>toward it.</h1>
+      <p class="hero-body">Written by an emerging psychotherapist sharing plain-language resources on EMDR, psychedelic-assisted therapy, IFS and parts work, somatic healing, and couples counselling — for anyone who is curious.</p>
+      <div class="tag-row">
+        <span class="tag">EMDR</span>
+        <span class="tag">Psychedelic Therapy</span>
+        <span class="tag">IFS & Parts Work</span>
+        <span class="tag">Somatic</span>
+        <span class="tag">Couples</span>
+        <span class="tag">Nervous System</span>
+      </div>
+    </div>
+    <div class="hero-right">
+      <img class="hero-img"
+        src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=1000&q=80&fit=crop"
+        alt="Pacific Northwest forest, British Columbia"
+        loading="eager">
+      <div class="hero-img-overlay"></div>
+      <div class="hero-coming">
+        <p class="hero-coming-label">Coming soon</p>
+        <p class="hero-coming-text">Private practice launching January 2027 — Vancouver and virtual across British Columbia and Canada.</p>
+        <p class="hero-coming-sub">Join the list below to be the first to know when I am accepting clients.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- BELIEF -->
+  <section class="belief">
+    <p class="belief-label fade-up">A belief</p>
+    <p class="belief-text fade-up">You are not your worst moments — and you are not broken. Beneath the anxiety, the patterns, and everything that has happened to you, something in you already knows the way back to <em>yourself.</em> Good therapy helps you find it.</p>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="about-text">
+      <p class="eyebrow fade-up">About</p>
+      <h2 class="about-h2 fade-up">A traveler, a student, and a <em>deep believer in human goodness.</em></h2>
+      <p class="about-body fade-up">I am Hilary McKee — an emerging psychotherapist completing my Master of Arts in Counselling Psychology at Yorkville University, and the Co-Founder and CEO of P.A.T.H. Therapy. I came to this work through years of proximity to healing environments, my own sustained personal therapy, and a lifelong curiosity about what makes real change possible.<br><br>I write about the modalities and ideas I find most compelling — not as someone selling services, but as someone who genuinely finds this territory fascinating and wants to make it more accessible.</p>
+      <a href="about.html" class="about-link fade-up">Read more</a>
+    </div>
+    <div class="about-img-wrap">
+      <img class="about-img"
+        src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=900&q=80&fit=crop"
+        alt="Misty mountains, British Columbia"
+        loading="lazy">
+      <div class="about-img-overlay"></div>
+      <span class="about-img-caption">British Columbia</span>
+    </div>
+  </section>
+
+  <!-- RESOURCES -->
+  <section class="resources" id="resources">
+    <div class="resources-header">
+      <div>
+        <p class="eyebrow fade-up">Resources</p>
+        <h2 class="resources-h2 fade-up">Plain-language guides to therapy, healing, and the <em>mind.</em></h2>
+      </div>
+      <div class="fade-up">
+        <p class="resources-intro">Whether you are curious about a specific modality, trying to understand your nervous system, navigating a relationship, or simply wondering whether therapy might help — this is a place to start. Written for real people, not clinicians.</p>
+        <a href="resources.html" class="resources-link">View all resources</a>
+      </div>
+    </div>
+    <div class="blog-grid">
+      <a class="blog-card featured" href="nervous-system.html">
+        <img class="blog-img"
+          src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=700&q=70&fit=crop&crop=top"
+          alt="Pacific Northwest forest"
+          loading="lazy">
+        <div class="blog-body">
+          <span class="blog-tag">Nervous System</span>
+          <h3 class="blog-title">Your body has three states — and most of us were never <em>taught what they mean.</em></h3>
+          <p class="blog-excerpt">Understanding how your nervous system works is the starting point for almost everything else in healing work. A plain-language guide.</p>
+          <div class="blog-footer">
+            <span class="blog-meta">8 min read</span>
+            <span class="blog-read">Read →</span>
+          </div>
+        </div>
+      </a>
+      <a class="blog-card" href="emdr.html">
+          <h3 class="blog-title">What is EMDR therapy — and how does it <em>actually work?</em></h3>
+          <p class="blog-excerpt">EMDR sounds strange on paper. It works anyway. Here is what actually happens in a session.</p>
+          <div class="blog-footer">
+            <span class="blog-meta">7 min read</span>
+            <span class="blog-read">Read →</span>
+          </div>
+        </div>
+      </a>
+      <a class="blog-card" href="resources.html">
+        <img class="blog-img"
+          src="https://images.unsplash.com/photo-1505118380757-91f5f5632de0?w=500&q=70&fit=crop"
+          alt="Pacific coast"
+          loading="lazy">
+        <div class="blog-body">
+          <span class="blog-tag">Relationships</span>
+          <h3 class="blog-title">The argument that is never <em>about the thing</em></h3>
+          <p class="blog-excerpt">Why couples fight about dishes, tone of voice, and being five minutes late — and what is actually underneath.</p>
+          <div class="blog-footer">
+            <span class="blog-meta">5 min read</span>
+            <span class="blog-read">Read →</span>
+          </div>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- QUOTE -->
+  <section class="quote-section">
+    <img class="quote-bg"
+      src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1400&q=50&fit=crop"
+      alt=""
+      loading="lazy"
+      aria-hidden="true">
+    <div class="quote-inner fade-up">
+      <span class="quote-mark">"</span>
+      <p class="quote-text">The most important thing I can offer a client is the certainty that <em>they will not be too much</em> for this room.</p>
+      <p class="quote-attr">Hilary McKee</p>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="newsletter" id="stay-in-touch">
+    <div class="fade-up">
+      <p class="eyebrow">Stay in touch</p>
+      <h2 class="newsletter-h2">New writing,<br>when it is <em>ready.</em></h2>
+      <p class="newsletter-body">No noise. Just occasional essays and guides on trauma, healing, the nervous system, and relationships — and a note when my Vancouver practice opens in 2027. I write when I have something worth saying.</p>
+    </div>
+    <form class="newsletter-form fade-up" name="newsletter" method="POST" data-netlify="true">
+      <input type="hidden" name="form-name" value="newsletter">
+      <div class="form-row">
+        <div class="form-field">
+          <label class="form-label" for="first-name">First name</label>
+          <input class="form-input" type="text" id="first-name" name="first-name" placeholder="Your name" required>
+        </div>
+        <div class="form-field">
+          <label class="form-label" for="email">Email</label>
+          <input class="form-input" type="email" id="email" name="email" placeholder="your@email.com" required>
+        </div>
+      </div>
+      <button class="btn" type="submit">Join the list</button>
+      <p class="form-note">No spam. Unsubscribe any time.</p>
+    </form>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <a href="index.html" class="footer-logo">Hilary McKee</a>
+  <div class="footer-links">
+    <a href="about.html" class="footer-link">About</a>
+    <a href="resources.html" class="footer-link">Resources</a>
+    <a href="contact.html" class="footer-link">Stay in touch</a>
+  </div>
+  <span class="footer-copy">© 2025 · Vancouver, BC · hilarymckee.ca</span>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resources | EMDR, Psychedelic Therapy & More | Hilary McKee</title>
+<meta name="description" content="Guides to EMDR therapy, psychedelic-assisted therapy, IFS, somatic therapy, couples counselling, and nervous system healing. Plain-language resources from Vancouver, BC.">
+<link rel="canonical" href="https://hilarymckee.ca/resources.html">
+<link rel="stylesheet" href="css/style.css">
+<style>
+  main { padding-top: var(--nav-height); }
+
+  /* HERO */
+  .resources-hero {
+    padding: 5rem 3.5rem 4rem;
+    background: var(--cream);
+    border-bottom: 0.5px solid var(--border);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: end;
+  }
+  .resources-hero h1 {
+    font-size: clamp(34px, 4.5vw, 52px);
+    letter-spacing: -0.02em;
+  }
+  .resources-hero h1 em { font-style: italic; color: var(--terra); }
+  .resources-hero-right p {
+    font-size: 14px;
+    color: var(--text-body);
+    line-height: 1.8;
+    margin-bottom: 1rem;
+  }
+
+  /* FILTER */
+  .filter-bar {
+    padding: 1.25rem 3.5rem;
+    background: var(--cream-dark);
+    border-bottom: 0.5px solid var(--border);
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .filter-label {
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-right: 6px;
+    font-weight: 400;
+  }
+  .filter-btn {
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 5px 14px;
+    border: 0.5px solid var(--border);
+    color: var(--text-muted);
+    background: transparent;
+    cursor: pointer;
+    font-family: 'Jost', sans-serif;
+    font-weight: 400;
+    transition: all 0.2s;
+  }
+  .filter-btn:hover { border-color: var(--terra); color: var(--terra); }
+  .filter-btn.active { background: var(--forest); color: var(--cream); border-color: var(--forest); }
+
+  /* GRID */
+  .posts-section {
+    padding: 3.5rem 3.5rem 5rem;
+    background: var(--cream);
+  }
+  .posts-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--border);
+  }
+  .post-card {
+    background: var(--cream);
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: inherit;
+    transition: background 0.2s;
+  }
+  .post-card:hover { background: var(--cream-mid); }
+  .post-card.large { grid-column: span 2; }
+  .post-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    filter: saturate(0.78);
+    transition: filter 0.3s;
+  }
+  .post-card.large .post-img { height: 260px; }
+  .post-card:hover .post-img { filter: saturate(0.95); }
+  .post-body { padding: 1.75rem; flex: 1; display: flex; flex-direction: column; }
+  .post-tag {
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--terra);
+    margin-bottom: 0.75rem;
+    font-weight: 400;
+  }
+  .post-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--text-dark);
+    line-height: 1.25;
+    margin-bottom: 0.75rem;
+    flex: 1;
+  }
+  .post-card.large .post-title { font-size: 26px; }
+  .post-title em { font-style: italic; }
+  .post-excerpt {
+    font-size: 12px;
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-bottom: 1.25rem;
+  }
+  .post-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+  }
+  .post-meta { font-size: 10px; color: var(--text-muted); }
+  .post-read {
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--terra);
+    font-weight: 400;
+  }
+
+  /* COMING SOON POSTS */
+  .post-card.coming-soon {
+    background: var(--cream-dark);
+    opacity: 0.7;
+    cursor: default;
+  }
+  .post-card.coming-soon:hover { background: var(--cream-dark); }
+  .post-card.coming-soon .post-img { filter: saturate(0.4) brightness(0.9); }
+  .coming-soon-badge {
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    border: 0.5px solid var(--border);
+    padding: 2px 7px;
+    display: inline-block;
+    margin-top: 0.5rem;
+    font-weight: 400;
+  }
+
+  /* NEWSLETTER CTA */
+  .resources-newsletter {
+    padding: 5rem 3.5rem;
+    background: var(--forest);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+    border-top: 0.5px solid var(--forest-mid);
+    position: relative;
+    overflow: hidden;
+  }
+  .resources-newsletter::before {
+    content: '';
+    position: absolute;
+    bottom: -60px; right: -60px;
+    width: 350px; height: 350px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(184,90,56,0.1) 0%, transparent 70%);
+  }
+  .resources-newsletter h2 {
+    font-size: clamp(24px, 3vw, 36px);
+    color: var(--olive-pale);
+    margin-bottom: 0.75rem;
+    margin-top: 0.75rem;
+  }
+  .resources-newsletter h2 em { font-style: italic; color: var(--terra-light); }
+  .resources-newsletter p {
+    font-size: 13px;
+    color: #4A5A38;
+    line-height: 1.8;
+  }
+  .resources-newsletter .eyebrow { color: #3A5028; }
+  .resources-newsletter .eyebrow::before { background: #3A5028; }
+  .resources-newsletter .form-input {
+    border-bottom-color: #3A5028;
+    color: var(--olive-pale);
+  }
+  .resources-newsletter .form-input::placeholder { color: #4A5A38; }
+  .resources-newsletter .form-input:focus { border-bottom-color: var(--terra-light); }
+  .resources-newsletter .form-label { color: #3A5028; }
+  .resources-newsletter .form-note { color: #3A5028; }
+  .nl-form { display: flex; flex-direction: column; gap: 14px; position: relative; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+
+  @media (max-width: 900px) {
+    .resources-hero { grid-template-columns: 1fr; gap: 1.5rem; padding: 4rem 1.5rem 3rem; }
+    .filter-bar { padding: 1rem 1.5rem; }
+    .posts-section { padding: 2.5rem 1.5rem 4rem; }
+    .posts-grid { grid-template-columns: 1fr; }
+    .post-card.large { grid-column: span 1; }
+    .resources-newsletter { grid-template-columns: 1fr; gap: 2.5rem; padding: 4rem 1.5rem; }
+    .form-row { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="index.html" class="nav-logo">Hilary McKee</a>
+  <div class="nav-links">
+    <a href="about.html" class="nav-link">About</a>
+    <a href="resources.html" class="nav-link active">Resources</a>
+    <a href="contact.html" class="nav-link">Stay in touch</a>
+  </div>
+  <div class="nav-hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<main>
+
+  <!-- HERO -->
+  <section class="resources-hero">
+    <div>
+      <p class="eyebrow fade-up">Resources</p>
+      <h1 class="fade-up">Guides to therapy, healing, and the <em>work of knowing yourself.</em></h1>
+    </div>
+    <div class="fade-up">
+      <p>A growing library of plain-language resources on the approaches and ideas I find most compelling — EMDR, psychedelic-assisted therapy, somatic work, IFS and parts work, couples counselling, and the deeper questions of what it means to heal.</p>
+      <p>Written for anyone who is curious, whether or not you are currently in therapy or considering it. New pieces added regularly.</p>
+    </div>
+  </section>
+
+  <!-- FILTER -->
+  <div class="filter-bar">
+    <span class="filter-label">Filter</span>
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="emdr">EMDR</button>
+    <button class="filter-btn" data-filter="psychedelic">Psychedelic Therapy</button>
+    <button class="filter-btn" data-filter="ifs">IFS & Parts Work</button>
+    <button class="filter-btn" data-filter="somatic">Somatic Therapy</button>
+    <button class="filter-btn" data-filter="couples">Couples & Relationships</button>
+    <button class="filter-btn" data-filter="nervous-system">Nervous System</button>
+    <button class="filter-btn" data-filter="self-compassion">Self-Compassion</button>
+  </div>
+
+  <!-- POSTS -->
+  <section class="posts-section">
+    <div class="posts-grid" id="posts-grid">
+
+      <a class="post-card large fade-up" href="nervous-system.html" data-category="nervous-system">
+        <img class="post-img"
+          src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=800&q=70&fit=crop&crop=top"
+          alt="Pacific Northwest forest"
+          loading="lazy">
+        <div class="post-body">
+          <span class="post-tag">Nervous System</span>
+          <h3 class="post-title">Your body has three states — and most of us were never <em>taught what they mean.</em></h3>
+          <p class="post-excerpt">Understanding how your nervous system works is the starting point for almost everything else in healing work. Polyvagal theory, explained simply — what the three states are, why you move between them, and what it means for anxiety, trauma, and relationships.</p>
+          <div class="post-footer">
+            <span class="post-meta">8 min read</span>
+            <span class="post-read">Read →</span>
+          </div>
+        </div>
+      </a>
+
+      <a class="post-card fade-up" href="emdr.html" data-category="emdr">
+        <img class="post-img"
+          src="https://images.unsplash.com/photo-1501854140801-50d01698950b?w=500&q=70&fit=crop"
+          alt="BC mountain landscape"
+          loading="lazy">
+        <div class="post-body">
+          <span class="post-tag">EMDR</span>
+          <h3 class="post-title">What is EMDR therapy — and how does it <em>actually work?</em></h3>
+          <p class="post-excerpt">EMDR sounds strange on paper. Bilateral stimulation, eye movements, reprocessing. Here is a plain-language explanation of what actually happens — and why the research behind it is so compelling.</p>
+          <div class="post-footer">
+            <span class="post-meta">7 min read</span>
+            <span class="post-read">Read →</span>
+          </div>
+        </div>
+      </a>
+
+      <a class="post-card fade-up" href="#" data-category="couples">
+        <img class="post-img"
+          src="https://images.unsplash.com/photo-1505118380757-91f5f5632de0?w=500&q=70&fit=crop"
+          alt="Pacific coast"
+          loading="lazy">
+        <div class="post-body">
+          <span class="post-tag">Couples & Relationships</span>
+          <h3 class="post-title">The argument that is never <em>about the thing</em></h3>
+          <p class="post-excerpt">Why couples fight about dishes, tone of voice, and being five minutes late — and what is actually happening underneath. Understanding the hidden conversation beneath the surface conflict.</p>
+          <div class="post-footer">
+            <span class="post-meta">5 min read</span>
+            <span class="post-read">Read →</span>
+          </div>
+        </div>
+      </a>
+
+      <a class="post-card fade-up" href="psychedelic-therapy.html" data-category="psychedelic">
+        <img class="post-img"
+          src="https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=500&q=70&fit=crop"
+          alt="Night sky"
+          loading="lazy">
+        <div class="post-body">
+          <span class="post-tag">Psychedelic Therapy</span>
+          <h3 class="post-title">What is psychedelic-assisted therapy — and is it <em>legal in Canada?</em></h3>
+          <p class="post-excerpt">Psilocybin, ketamine, MDMA — the landscape of psychedelic-assisted therapy in Canada is shifting rapidly. Here is where things actually stand, and what it means for people seeking this kind of care.</p>
+          <div class="post-footer">
+            <span class="post-meta">9 min read</span>
+            <span class="post-read">Read →</span>
+          </div>
+        </div>
+      </a>
+
+      <a class="post-card fade-up" href="#" data-category="ifs">
+        <img class="post-img"
+          src="https://images.unsplash.com/photo-1518173946687-a4c8892bbd9f?w=500&q=70&fit=crop"
+          alt="Forest light"
+          loading="lazy">
+        <div class="post-body">
+          <span class="post-tag">IFS & Parts Work</span>
+          <h3 class="post-title">What is IFS therapy — a plain-language guide to <em>parts work</em></h3>
+          <p class="post-excerpt">You contain multitudes. IFS — Internal Family Systems — says that is not a problem. It is a map. Here is how parts work actually works, and why so many people find it transformative.</p>
+          <div class="post-footer">
+            <span class="post-meta">6 min read</span>
+            <span class="post-read">Read →</span>
+          </div>
+        </div>
+      </a>
+
+      <a class="post-card fade-up" href="#" data-category="somatic">
+        <img class="post-img"
+          src="https://images.unsplash.com/photo-1476611338391-6f395a0dd82e?w=500&q=70&fit=crop"
+          alt="Nature texture"
+          loading="lazy">
+        <div class="post-body">
+          <span class="post-tag">Somatic Therapy</span>
+          <h3 class="post-title">Why healing happens in the body — not <em>just the mind</em></h3>
+          <p class="post-excerpt">Somatic therapy works at the level of the nervous system and the felt sense of the body. Here is what that actually means — and why talk therapy alone sometimes hits a ceiling.</p>
+          <div class="post-footer">
+            <span class="post-meta">6 min read</span>
+            <span class="post-read">Read →</span>
+          </div>
+        </div>
+      </a>
+
+      <a class="post-card coming-soon fade-up" href="#" data-category="couples">
+        <img class="post-img"
+          src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=500&q=50&fit=crop"
+          alt="BC mountains"
+          loading="lazy">
+        <div class="post-body">
+          <span class="post-tag">Couples & Relationships</span>
+          <h3 class="post-title">What is EFT couples therapy — and <em>does it actually work?</em></h3>
+          <p class="post-excerpt">Emotionally Focused Therapy is one of the most researched approaches to couples counselling. Here is what it involves and what the evidence actually says.</p>
+          <div class="post-footer">
+            <span class="post-meta">Coming soon</span>
+            <span class="coming-soon-badge">In progress</span>
+          </div>
+        </div>
+      </a>
+
+      <a class="post-card coming-soon fade-up" href="#" data-category="self-compassion">
+        <img class="post-img"
+          src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=500&q=50&fit=crop"
+          alt="Forest path"
+          loading="lazy">
+        <div class="post-body">
+          <span class="post-tag">Self-Compassion</span>
+          <h3 class="post-title">Why being kinder to yourself is not <em>soft</em> — it is science</h3>
+          <p class="post-excerpt">Self-compassion is one of the most evidence-supported predictors of wellbeing and resilience. Here is what the research actually shows — and what it looks like in practice.</p>
+          <div class="post-footer">
+            <span class="post-meta">Coming soon</span>
+            <span class="coming-soon-badge">In progress</span>
+          </div>
+        </div>
+      </a>
+
+      <a class="post-card coming-soon fade-up" href="#" data-category="nervous-system">
+        <img class="post-img"
+          src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=500&q=50&fit=crop"
+          alt="Ocean coast"
+          loading="lazy">
+        <div class="post-body">
+          <span class="post-tag">Nervous System</span>
+          <h3 class="post-title">Anxious attachment — what it is and <em>how it changes</em></h3>
+          <p class="post-excerpt">Anxious attachment is one of the most searched mental health topics in Canada. Here is a clear, non-pathologising guide to what it actually means and how healing happens.</p>
+          <div class="post-footer">
+            <span class="post-meta">Coming soon</span>
+            <span class="coming-soon-badge">In progress</span>
+          </div>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="resources-newsletter">
+    <div class="fade-up">
+      <p class="eyebrow">Stay in touch</p>
+      <h2>New resources, <em>when they are ready.</em></h2>
+      <p>Join the list for new guides and essays as they are published — and a note when my Vancouver practice opens in January 2027, offering in-person sessions and virtual counselling across British Columbia and Canada.</p>
+    </div>
+    <form class="nl-form fade-up" name="newsletter-resources" method="POST" data-netlify="true">
+      <input type="hidden" name="form-name" value="newsletter-resources">
+      <div class="form-row">
+        <div class="form-field">
+          <label class="form-label" for="res-name">First name</label>
+          <input class="form-input" type="text" id="res-name" name="first-name" placeholder="Your name" required>
+        </div>
+        <div class="form-field">
+          <label class="form-label" for="res-email">Email</label>
+          <input class="form-input" type="email" id="res-email" name="email" placeholder="your@email.com" required>
+        </div>
+      </div>
+      <button class="btn" type="submit">Join the list</button>
+      <p class="form-note">No spam. Unsubscribe any time.</p>
+    </form>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <a href="index.html" class="footer-logo">Hilary McKee</a>
+  <div class="footer-links">
+    <a href="about.html" class="footer-link">About</a>
+    <a href="resources.html" class="footer-link">Resources</a>
+    <a href="contact.html" class="footer-link">Stay in touch</a>
+  </div>
+  <span class="footer-copy">© 2025 · Vancouver, BC · hilarymckee.ca</span>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+  // Filter functionality
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const postCards = document.querySelectorAll('.post-card');
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const filter = btn.dataset.filter;
+      postCards.forEach(card => {
+        if (filter === 'all' || card.dataset.category === filter) {
+          card.style.display = '';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+</script>
+</body>
+</html>
