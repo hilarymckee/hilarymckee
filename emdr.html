@@ -518,16 +518,15 @@
       <h2>More writing like this, <em>when it is ready.</em></h2>
       <p>Join the list for occasional essays on therapy, the nervous system, and healing — and a note when my Vancouver practice opens in 2027.</p>
     </div>
-    <form class="nl-form fade-up" name="newsletter-emdr" method="POST" data-netlify="true">
-      <input type="hidden" name="form-name" value="newsletter-emdr">
+    <form class="nl-form fade-up" name="newsletter-emdr" action="https://app.kit.com/forms/9722332/subscriptions" method="post">
       <div class="form-row">
         <div class="form-field">
           <label class="form-label" for="emdr-name">First name</label>
-          <input class="form-input" type="text" id="emdr-name" name="first-name" placeholder="Your name" required>
+          <input class="form-input" type="text" id="emdr-name" name="fields[first_name]" placeholder="Your name" required>
         </div>
         <div class="form-field">
           <label class="form-label" for="emdr-email">Email</label>
-          <input class="form-input" type="email" id="emdr-email" name="email" placeholder="your@email.com" required>
+          <input class="form-input" type="email" id="emdr-email" name="email_address" placeholder="your@email.com" required>
         </div>
       </div>
       <button class="btn" type="submit">Join the list</button>

@@ -508,16 +508,15 @@
       <h2>More writing like this, <em>when it is ready.</em></h2>
       <p>Join the list for occasional essays on therapy, the nervous system, and healing — and a note when my Vancouver practice opens in 2027.</p>
     </div>
-    <form class="nl-form fade-up" name="newsletter-psychedelic" method="POST" data-netlify="true">
-      <input type="hidden" name="form-name" value="newsletter-psychedelic">
+    <form class="nl-form fade-up" name="newsletter-psychedelic" action="https://app.kit.com/forms/9722332/subscriptions" method="post">
       <div class="form-row">
         <div class="form-field">
           <label class="form-label" for="psy-name">First name</label>
-          <input class="form-input" type="text" id="psy-name" name="first-name" placeholder="Your name" required>
+          <input class="form-input" type="text" id="psy-name" name="fields[first_name]" placeholder="Your name" required>
         </div>
         <div class="form-field">
           <label class="form-label" for="psy-email">Email</label>
-          <input class="form-input" type="email" id="psy-email" name="email" placeholder="your@email.com" required>
+          <input class="form-input" type="email" id="psy-email" name="email_address" placeholder="your@email.com" required>
         </div>
       </div>
       <button class="btn" type="submit">Join the list</button>

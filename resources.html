@@ -424,16 +424,15 @@
       <h2>New resources, <em>when they are ready.</em></h2>
       <p>Join the list for new guides and essays as they are published — and a note when my Vancouver practice opens in January 2027, offering in-person sessions and virtual counselling across British Columbia and Canada.</p>
     </div>
-    <form class="nl-form fade-up" name="newsletter-resources" method="POST" data-netlify="true">
-      <input type="hidden" name="form-name" value="newsletter-resources">
+    <form class="nl-form fade-up" name="newsletter-resources" action="https://app.kit.com/forms/9722332/subscriptions" method="post">
       <div class="form-row">
         <div class="form-field">
           <label class="form-label" for="res-name">First name</label>
-          <input class="form-input" type="text" id="res-name" name="first-name" placeholder="Your name" required>
+          <input class="form-input" type="text" id="res-name" name="fields[first_name]" placeholder="Your name" required>
         </div>
         <div class="form-field">
           <label class="form-label" for="res-email">Email</label>
-          <input class="form-input" type="email" id="res-email" name="email" placeholder="your@email.com" required>
+          <input class="form-input" type="email" id="res-email" name="email_address" placeholder="your@email.com" required>
         </div>
       </div>
       <button class="btn" type="submit">Join the list</button>
