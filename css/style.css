@@ -62,7 +62,7 @@ a:hover { color: var(--terra-light); }
 }
 .nav-logo {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 400;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -75,7 +75,7 @@ a:hover { color: var(--terra-light); }
   align-items: center;
 }
 .nav-link {
-  font-size: 11px;
+  font-size: 13px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--text-muted);
@@ -107,7 +107,7 @@ h1, h2, h3 {
   color: var(--text-dark);
 }
 .eyebrow {
-  font-size: 10px;
+  font-size: 12px;
   letter-spacing: 0.24em;
   text-transform: uppercase;
   color: var(--terra);
@@ -129,7 +129,7 @@ h1, h2, h3 {
 .btn {
   display: inline-block;
   font-family: 'Jost', sans-serif;
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 400;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -157,7 +157,7 @@ h1, h2, h3 {
   gap: 6px;
 }
 .tag {
-  font-size: 10px;
+  font-size: 12px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   padding: 5px 12px;
@@ -199,7 +199,7 @@ h1, h2, h3 {
   gap: 6px;
 }
 .form-label {
-  font-size: 10px;
+  font-size: 12px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--text-muted);
@@ -207,7 +207,7 @@ h1, h2, h3 {
 }
 .form-input {
   font-family: 'Jost', sans-serif;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 300;
   color: var(--text-dark);
   background: transparent;
@@ -235,7 +235,7 @@ textarea.form-input { resize: none; height: 90px; }
 }
 .footer-logo {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 14px;
+  font-size: 16px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: #3A2818;
@@ -246,14 +246,14 @@ textarea.form-input { resize: none; height: 90px; }
   gap: 2rem;
 }
 .footer-link {
-  font-size: 11px;
+  font-size: 13px;
   letter-spacing: 0.1em;
   color: #2A1810;
   text-decoration: none;
   transition: color 0.2s;
 }
 .footer-link:hover { color: var(--terra); }
-.footer-copy { font-size: 11px; color: #1A1008; }
+.footer-copy { font-size: 13px; color: #1A1008; }
 
 /* â”€â”€ ANIMATIONS â”€â”€ */
 @keyframes fadeUp {
