@@ -210,6 +210,8 @@
     .about-cta { padding: 4rem 1.5rem; flex-direction: column; align-items: flex-start; }
     .detail-item { grid-template-columns: 110px 1fr; }
   }
+  .about-img.portrait { filter: none; mix-blend-mode: normal; object-position: center 22%; }
+  .about-img-wrap.has-portrait .about-img-overlay, .about-img-wrap.has-portrait .about-img-caption { display: none; }
 </style>
 </head>
 <body>
@@ -282,10 +284,11 @@
       <h2 class="fade-up">Humans are <em>love at their core.</em> Everything else is a layer.</h2>
       <p class="fade-up">This is not a soft idea. It is a clinical conviction — one that shapes how I sit with people, how I understand symptoms and defences, and how I hold hope for change even when it feels impossible.</p>
     </div>
-    <div class="about-img-wrap">
-      <img class="about-img"
-        src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=900&q=80&fit=crop&auto=format"
-        alt="Misty mountains, British Columbia"
+    <div class="about-img-wrap has-portrait">
+      <img class="about-img portrait"
+        src="/img/hilary-mckee.jpg"
+        alt="Hilary McKee, emerging psychotherapist in Vancouver, BC, sitting in a leather chair and smiling"
+        width="1200" height="1800"
         loading="lazy">
       <div class="about-img-overlay"></div>
     </div>

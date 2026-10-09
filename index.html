@@ -19,6 +19,7 @@
   "@context": "https://schema.org",
   "@type": "Person",
   "name": "Hilary McKee",
+  "image": "https://hilarymckee.ca/img/hilary-mckee.jpg",
   "jobTitle": "Emerging Psychotherapist",
   "description": "Emerging psychotherapist and writer sharing resources on EMDR, psychedelic-assisted therapy, IFS, somatic therapy and couples counselling.",
   "url": "https://hilarymckee.ca/about",
@@ -463,6 +464,8 @@
     .form-row { grid-template-columns: 1fr; }
     .quote-section { padding: 5rem 1.5rem; }
   }
+  .about-img.portrait { filter: none; mix-blend-mode: normal; object-position: center 22%; }
+  .about-img-wrap.has-portrait .about-img-overlay, .about-img-wrap.has-portrait .about-img-caption { display: none; }
 </style>
 </head>
 <body>
@@ -524,10 +527,11 @@
       <p class="about-body fade-up">I am Hilary McKee — an emerging psychotherapist completing my Master of Arts in Counselling Psychology at Yorkville University, and the Co-Founder and CEO of P.A.T.H. Therapy. I came to this work through years of proximity to healing environments, my own sustained personal therapy, and a lifelong curiosity about what makes real change possible.<br><br>I write about the modalities and ideas I find most compelling — not as someone selling services, but as someone who genuinely finds this territory fascinating and wants to make it more accessible.</p>
       <a href="/about" class="about-link fade-up">Read more</a>
     </div>
-    <div class="about-img-wrap">
-      <img class="about-img"
-        src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=900&q=80&fit=crop&auto=format"
-        alt="Misty mountains, British Columbia"
+    <div class="about-img-wrap has-portrait">
+      <img class="about-img portrait"
+        src="/img/hilary-mckee.jpg"
+        alt="Hilary McKee, emerging psychotherapist in Vancouver, BC, sitting in a leather chair and smiling"
+        width="1200" height="1800"
         loading="lazy">
       <div class="about-img-overlay"></div>
       <span class="about-img-caption">British Columbia</span>
