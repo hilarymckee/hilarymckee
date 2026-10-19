@@ -177,7 +177,7 @@ h1, h2, h3 {
 .section-forest h2,
 .section-forest h3 { color: var(--olive-pale); }
 .section-forest p { color: #8AAA80; }
-.section-forest .eyebrow { color: #3A5028; }
+.section-forest .eyebrow { color: #C5CEB5; }
 .section-forest .eyebrow::before { background: #3A5028; }
 
 .section-olive { background: var(--olive); }
