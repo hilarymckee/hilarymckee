@@ -102,6 +102,11 @@
     color: var(--text-muted);
     line-height: 1.7;
   }
+  .form-status {
+    font-size: 15px;
+    color: var(--text-body);
+    line-height: 1.85;
+  }
 
   /* LOCATION SECTION */
   .location-section {
@@ -188,8 +193,8 @@
       <p class="contact-note">Please note: I am not yet a registered therapist and am unable to provide clinical advice or crisis support through this form. If you are in crisis, please contact the BC Crisis Line at 1-800-784-2433 or visit a local emergency room.</p>
     </div>
     <div class="contact-right fade-up">
-      <form class="contact-form" name="contact" method="POST" data-netlify="true">
-        <input type="hidden" name="form-name" value="contact">
+      <form class="contact-form" action="https://formspree.io/f/mkjoaqkb" method="POST">
+        <input type="text" name="_gotcha" style="display:none">
         <div class="form-row">
           <div class="form-field">
             <label class="form-label" for="contact-name">Full name</label>
@@ -202,7 +207,7 @@
         </div>
         <div class="form-field">
           <label class="form-label" for="contact-message">Message</label>
-          <textarea class="form-input" id="contact-message" name="message" placeholder="What is on your mind — no pressure to share everything." required></textarea>
+          <textarea class="form-input" id="contact-message" name="message" placeholder="What's on your mind? No pressure to share everything." required></textarea>
         </div>
         <button class="btn" type="submit">Send message</button>
         <p class="form-note">For media enquiries, collaboration requests, or general questions about my writing — email is also welcome at hello@hilarymckee.ca</p>
@@ -243,5 +248,40 @@
 </footer>
 
 <script src="/js/main.js"></script>
+<script>
+  // Contact form: submit to Formspree without leaving the page
+  const contactForm = document.querySelector('.contact-form');
+  if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const button = contactForm.querySelector('button[type="submit"]');
+      const existingError = contactForm.querySelector('.form-status');
+      if (existingError) existingError.remove();
+      if (button) button.disabled = true;
+
+      fetch(contactForm.action, {
+        method: 'POST',
+        body: new FormData(contactForm),
+        headers: { 'Accept': 'application/json' }
+      }).then(response => {
+        if (!response.ok) throw new Error('Form submission failed');
+        const success = document.createElement('p');
+        success.className = 'form-status';
+        success.textContent = 'Thank you. Your message is on its way, and I\'ll get back to you soon.';
+        contactForm.replaceWith(success);
+      }).catch(() => {
+        const error = document.createElement('p');
+        error.className = 'form-status';
+        error.textContent = 'Something went wrong. Please try again, or email me directly.';
+        if (button) {
+          button.disabled = false;
+          button.insertAdjacentElement('afterend', error);
+        } else {
+          contactForm.appendChild(error);
+        }
+      });
+    });
+  }
+</script>
 </body>
 </html>
