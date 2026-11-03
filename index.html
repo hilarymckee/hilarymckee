@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hilary McKee | Therapy Guides from Vancouver, BC</title>
-<meta name="description" content="Plain-language guides to EMDR, IFS, somatic therapy and couples work, from an emerging psychotherapist in Vancouver, BC.">
+<title>Hilary McKee | Plain-Language Therapy Guides, Vancouver BC</title>
+<meta name="description" content="Plain-language guides to therapy in BC: IFS and parts work, the nervous system, EMDR, couples work, and how to find affordable counselling. By Hilary McKee, Vancouver.">
 <link rel="canonical" href="https://hilarymckee.ca/">
-<meta property="og:title" content="Hilary McKee | Therapy Guides from Vancouver, BC">
-<meta property="og:description" content="Plain-language guides to EMDR, IFS, somatic therapy and couples work, from an emerging psychotherapist in Vancouver, BC.">
+<meta property="og:title" content="Hilary McKee | Plain-Language Therapy Guides, Vancouver BC">
+<meta property="og:description" content="Plain-language guides to therapy in BC: IFS and parts work, the nervous system, EMDR, couples work, and how to find affordable counselling. By Hilary McKee, Vancouver.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://hilarymckee.ca/">
 <meta property="og:image" content="https://hilarymckee.ca/og-default.jpg">
@@ -20,8 +20,8 @@
   "@type": "Person",
   "name": "Hilary McKee",
   "image": "https://hilarymckee.ca/img/hilary-mckee.jpg",
-  "jobTitle": "Emerging Psychotherapist",
-  "description": "Emerging psychotherapist and writer sharing resources on EMDR, psychedelic-assisted therapy, IFS, somatic therapy and couples counselling.",
+  "jobTitle": "Counselling Psychology Student",
+  "description": "Counselling psychology student and writer sharing resources on EMDR, IFS, somatic therapy and couples counselling.",
   "url": "https://hilarymckee.ca/about",
   "sameAs": ["https://www.linkedin.com/in/hilary-mckee/", "https://www.paththerapy.ca/team/leadership", "https://www.instagram.com/therapywithhil/"],
   "alumniOf": {
@@ -34,16 +34,26 @@
     "addressRegion": "BC",
     "addressCountry": "CA"
   },
-  "knowsAbout": ["EMDR Therapy","Somatic Therapy","Internal Family Systems","Psychedelic-Assisted Therapy","Couples Counselling","Nervous System Regulation","Attachment Theory"]
+  "knowsAbout": ["EMDR Therapy","Somatic Therapy","Internal Family Systems","Couples Counselling","Nervous System Regulation","Attachment Theory"]
 }
 </script>
 <link rel="icon" type="image/png" href="/favicon-512.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Jost:wght@300;400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Jost:wght@300;400;500&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Jost:wght@300;400;500&display=swap"></noscript>
 <link rel="stylesheet" href="/css/style.css">
   <!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-R148C0320P"></script>
+<script>
+  window.addEventListener('load', function () {
+    setTimeout(function () {
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-R148C0320P';
+      document.head.appendChild(s);
+    }, 1500);
+  });
+</script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -145,6 +155,8 @@
     margin-bottom: 0.4rem;
     font-weight: 300;
   }
+  .hero-coming-text a { color: var(--terra-light); border-bottom: 0.5px solid rgba(216,220,192,0.4); }
+  .hero-coming-text a:hover { color: #D8DCC0; }
   .hero-coming-sub {
     font-size: 13px;
     color: rgba(216,220,192,0.5);
@@ -368,6 +380,37 @@
     font-weight: 400;
   }
 
+  /* ── START HERE ── */
+  .start-here {
+    margin-top: 4rem;
+    padding-top: 3rem;
+    border-top: 0.5px solid var(--border);
+    max-width: 760px;
+  }
+  .start-here .resources-h2 { margin-top: 0; margin-bottom: 1rem; }
+  .start-list { list-style: none; margin: 0; padding: 0; }
+  .start-list li {
+    padding: 1.1rem 0;
+    border-bottom: 0.5px solid var(--border);
+  }
+  .start-list a {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 21px;
+    font-weight: 400;
+    color: var(--text-dark);
+    line-height: 1.25;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 0.3rem;
+    transition: color 0.2s;
+  }
+  .start-list a:hover { color: var(--terra); }
+  .start-list span {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.7;
+  }
+
   /* ── QUOTE ── */
   .quote-section {
     background: var(--olive);
@@ -466,6 +509,7 @@
   }
   .about-img.portrait { filter: none; mix-blend-mode: normal; object-position: center 22%; }
   .about-img-wrap.has-portrait .about-img-overlay, .about-img-wrap.has-portrait .about-img-caption { display: none; }
+  .about-img-wrap picture { display: block; width: 100%; height: 100%; }
 </style>
 </head>
 <body>
@@ -490,7 +534,7 @@
     <div class="hero-left">
       <p class="eyebrow">Vancouver, BC</p>
       <h1 class="hero-h1">A space to learn<br>about healing,<br>and <em>find your way</em><br>toward it.</h1>
-      <p class="hero-body">Written by an emerging psychotherapist sharing plain-language resources on EMDR, psychedelic-assisted therapy, IFS and parts work, somatic healing, and couples counselling — for anyone who is curious.</p>
+      <p class="hero-body">Plain-language resources on IFS and parts work, the nervous system, EMDR, somatic healing, couples work and finding therapy in BC, for anyone who is curious.</p>
       <div class="tag-row">
         <span class="tag">EMDR</span>
         <span class="tag">IFS & Parts Work</span>
@@ -503,11 +547,13 @@
       <img class="hero-img"
         src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=1000&q=80&fit=crop&auto=format"
         alt="Pacific Northwest forest, British Columbia"
-        loading="eager">
+        width="1000" height="667"
+        loading="eager"
+        fetchpriority="high">
       <div class="hero-img-overlay"></div>
       <div class="hero-coming">
-        <p class="hero-coming-label">Coming soon</p>
-        <p class="hero-coming-text">Private practice opening in Vancouver — virtual across British Columbia and Canada.</p>
+        <p class="hero-coming-label">Starting January 2027</p>
+        <p class="hero-coming-text">I'll be seeing clients as a student counsellor at <a href="/contact">East Vancouver Counselling</a>, in person on Commercial Drive and online across BC.</p>
         <p class="hero-coming-sub">Join the list below to be the first to know when I am accepting clients.</p>
       </div>
     </div>
@@ -516,7 +562,7 @@
   <!-- BELIEF -->
   <section class="belief">
     <p class="belief-label fade-up">A belief</p>
-    <p class="belief-text fade-up">You are not your worst moments — and you are not broken. Beneath the anxiety, the patterns, and everything that has happened to you, something in you already knows the way back to <em>yourself.</em> Good therapy helps you find it.</p>
+    <p class="belief-text fade-up">You are not your worst moments, and you are not broken. Beneath the anxiety, the patterns, and everything that has happened to you, something in you already knows the way back to <em>yourself.</em> Good therapy helps you find it.</p>
   </section>
 
   <!-- ABOUT -->
@@ -524,15 +570,18 @@
     <div class="about-text">
       <p class="eyebrow fade-up">About</p>
       <h2 class="about-h2 fade-up">A traveler, a student, and a <em>deep believer in human goodness.</em></h2>
-      <p class="about-body fade-up">I am Hilary McKee — an emerging psychotherapist completing my Master of Arts in Counselling Psychology at Yorkville University, and the Co-Founder and CEO of P.A.T.H. Therapy. I came to this work through years of proximity to healing environments, my own sustained personal therapy, and a lifelong curiosity about what makes real change possible.<br><br>I write about the modalities and ideas I find most compelling — not as someone selling services, but as someone who genuinely finds this territory fascinating and wants to make it more accessible.</p>
-      <a href="/about" class="about-link fade-up">Read more</a>
+      <p class="about-body fade-up">I am Hilary McKee, a counselling psychology student completing my Master of Arts in Counselling Psychology at Yorkville University, and the Co-Founder and CEO of P.A.T.H. Therapy. I came to this work through years of proximity to healing environments, my own sustained personal therapy, and a lifelong curiosity about what makes real change possible.<br><br>I write about the modalities and ideas I find most compelling, not as someone selling services, but as someone who genuinely finds this territory fascinating and wants to make it more accessible.</p>
+      <a href="/about" class="about-link fade-up">Read more about me</a>
     </div>
     <div class="about-img-wrap has-portrait">
-      <img class="about-img portrait"
-        src="/img/hilary-mckee.jpg"
-        alt="Hilary McKee, emerging psychotherapist in Vancouver, BC, sitting in a leather chair and smiling"
-        width="1200" height="1800"
-        loading="lazy">
+      <picture>
+        <source srcset="/img/hilary-mckee.webp" type="image/webp">
+        <img class="about-img portrait"
+          src="/img/hilary-mckee.jpg"
+          alt="Hilary McKee, counselling psychology student in Vancouver, BC, sitting in a leather chair and smiling"
+          width="800" height="1200"
+          loading="lazy" decoding="async">
+      </picture>
       <div class="about-img-overlay"></div>
       <span class="about-img-caption">British Columbia</span>
     </div>
@@ -546,7 +595,7 @@
         <h2 class="resources-h2 fade-up">Plain-language guides to therapy, healing, and the <em>mind.</em></h2>
       </div>
       <div class="fade-up">
-        <p class="resources-intro">Whether you are curious about a specific modality, trying to understand your nervous system, navigating a relationship, or simply wondering whether therapy might help — this is a place to start. Written for real people, not clinicians.</p>
+        <p class="resources-intro">Whether you are curious about a specific modality, trying to understand your nervous system, navigating a relationship, or simply wondering whether therapy might help, this is a place to start. Written for real people, not clinicians.</p>
         <a href="/resources" class="resources-link">View all resources</a>
       </div>
     </div>
@@ -555,7 +604,7 @@
         <img class="blog-img"
           src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=700&q=70&fit=crop&crop=top&auto=format"
           alt="Pacific Northwest forest"
-          loading="lazy">
+          loading="lazy" decoding="async">
         <div class="blog-body">
           <span class="blog-tag">Nervous System</span>
           <h3 class="blog-title">Your body has three states, and most of us were never <em>taught what they mean.</em></h3>
@@ -567,7 +616,7 @@
         </div>
       </a>
       <a class="blog-card" href="/ifs-parts-work">
-        <img class="blog-img" src="https://images.unsplash.com/photo-1518173946687-a4c8892bbd9f?w=500&q=70&fit=crop&auto=format" alt="Forest light" loading="lazy">
+        <img class="blog-img" src="https://images.unsplash.com/photo-1518173946687-a4c8892bbd9f?w=500&q=70&fit=crop&auto=format" alt="Forest light" loading="lazy" decoding="async">
         <div class="blog-body">
           <span class="blog-tag">IFS & Parts Work</span>
           <h3 class="blog-title">What is IFS therapy? A plain-language guide to <em>parts work</em></h3>
@@ -582,7 +631,7 @@
         <img class="blog-img"
           src="https://images.unsplash.com/photo-1716300717883-915fef35a46d?w=500&q=70&fit=crop&auto=format"
           alt="A small couch and armchair in a counselling office"
-          loading="lazy">
+          loading="lazy" decoding="async">
         <div class="blog-body">
           <span class="blog-tag">Starting Therapy</span>
           <h3 class="blog-title">How to choose the right therapist for you</h3>
@@ -594,6 +643,17 @@
         </div>
       </a>
     </div>
+
+    <div class="start-here">
+      <h2 class="resources-h2 fade-up">Start <em>here.</em></h2>
+      <p class="resources-intro fade-up">New to therapy in BC, or not sure where to begin? These guides answer the questions people ask most.</p>
+      <ul class="start-list fade-up">
+        <li><a href="/bc-counselling-regulation">Are Counsellors Regulated in BC? What's Changing in 2027</a><span>Whether counsellors are regulated in BC today, and what changes when psychotherapy becomes regulated in 2027.</span></li>
+        <li><a href="/counsellor-psychotherapist-psychologist-bc">Counsellor vs Psychotherapist vs Psychologist in BC</a><span>Counsellor, psychotherapist, psychologist or RCC: what the titles mean in BC.</span></li>
+        <li><a href="/low-cost-counselling-bc">Free and Low-Cost Counselling in BC: A 2026 Guide</a><span>Free and low-cost counselling options across BC.</span></li>
+        <li><a href="/emotionally-immature-parents">Emotionally Immature Parents: Signs, Effects and Healing</a><span>Growing up with emotionally immature parents, and how it shows up in adult life.</span></li>
+      </ul>
+    </div>
   </section>
 
   <!-- QUOTE -->
@@ -601,7 +661,7 @@
     <img class="quote-bg"
       src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1400&q=50&fit=crop&auto=format"
       alt=""
-      loading="lazy"
+      loading="lazy" decoding="async"
       aria-hidden="true">
     <div class="quote-inner fade-up">
       <span class="quote-mark">"</span>
@@ -615,7 +675,7 @@
     <div class="fade-up">
       <p class="eyebrow">Stay in touch</p>
       <h2 class="newsletter-h2">New writing,<br>when it is <em>ready.</em></h2>
-      <p class="newsletter-body">No noise. Just occasional essays and guides on trauma, healing, the nervous system, and relationships — and a note when my Vancouver practice opens. I write when I have something worth saying.</p>
+      <p class="newsletter-body">No noise. Just occasional essays and guides on trauma, healing, the nervous system, and relationships, and a note when my Vancouver practice opens. I write when I have something worth saying.</p>
     </div>
     <form class="newsletter-form fade-up" name="newsletter" action="https://app.kit.com/forms/9722332/subscriptions" method="post">
       <div class="form-row">
