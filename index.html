@@ -101,6 +101,7 @@
 </script>
 <link rel="icon" type="image/png" href="/favicon-512.png">
 <link rel="preload" href="/fonts/cormorant-garamond-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/jost-latin.woff2" as="font" type="font/woff2" crossorigin>
 <style>
 @font-face {
   font-family: 'Cormorant Garamond';
@@ -127,7 +128,9 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 </style>
-<link rel="stylesheet" href="/css/style.css">
+<style>:root{--cream:#FAF6F0;--cream-dark:#F0E8DC;--cream-mid:#E8DDD0;--terra:#B85A38;--terra-light:#D4785A;--terra-pale:#F0DDD4;--forest:#1E2E18;--forest-mid:#283C20;--forest-light:#3A5028;--olive:#4A5A28;--olive-light:#7A8A50;--olive-pale:#D8DCC0;--earth:#180E08;--text-dark:#241408;--text-body:#6A5040;--text-muted:#9A8070;--border:#DDD0C0;--border-light:#EAE0D4;--nav-height:64px}*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:'Jost',sans-serif;font-weight:300;background:var(--cream);color:var(--text-dark);overflow-x:hidden;-webkit-font-smoothing:antialiased}img{display:block;width:100%}a{color:var(--terra);text-decoration:none;transition:color 0.2s}a:hover{color:var(--terra-light)}.nav{position:fixed;top:0;left:0;right:0;z-index:100;height:var(--nav-height);display:flex;justify-content:space-between;align-items:center;padding:0 3rem;background:rgba(250,246,240,0.97);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:0.5px solid var(--border-light);transition:box-shadow 0.3s}.nav.scrolled{box-shadow:0 1px 20px rgba(36,20,8,0.06)}.nav-logo{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:400;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-dark);text-decoration:none}.nav-links{display:flex;gap:2.5rem;align-items:center}.nav-link{font-size:13px;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-muted);text-decoration:none;transition:color 0.2s}.nav-link:hover{color:var(--text-dark)}.nav-link.active{color:var(--terra)}.nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}.nav-hamburger span{display:block;width:22px;height:1px;background:var(--text-dark);transition:all 0.3s}h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:300;line-height:1.1;color:var(--text-dark)}.eyebrow{font-size:12px;letter-spacing:0.24em;text-transform:uppercase;color:var(--terra);display:flex;align-items:center;gap:10px;margin-bottom:1.25rem;font-weight:400}.eyebrow::before{content:'';width:20px;height:0.5px;background:var(--terra);flex-shrink:0}.btn{display:inline-block;font-family:'Jost',sans-serif;font-size:13px;font-weight:400;letter-spacing:0.14em;text-transform:uppercase;color:var(--cream);background:var(--forest);padding:13px 26px;border:none;border-radius:1px;cursor:pointer;text-decoration:none;transition:background 0.2s}.btn:hover{background:var(--forest-light);color:var(--cream)}.btn-outline{background:transparent;color:var(--terra);border:0.5px solid var(--terra)}.btn-outline:hover{background:var(--terra);color:var(--cream)}.tag-row{display:flex;flex-wrap:wrap;gap:6px}.tag{font-size:12px;letter-spacing:0.08em;text-transform:uppercase;padding:5px 12px;border:0.5px solid var(--border);color:var(--text-muted);font-family:'Jost',sans-serif;font-weight:400}.form-field{display:flex;flex-direction:column;gap:6px}.form-label{font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-muted);font-weight:400}.form-input{font-family:'Jost',sans-serif;font-size:15px;font-weight:300;color:var(--text-dark);background:transparent;border:none;border-bottom:0.5px solid var(--border);padding:8px 0;outline:none;transition:border-color 0.2s;width:100%}.form-input:focus{border-bottom-color:var(--terra)}.form-input::placeholder{color:var(--text-muted);opacity:0.5}textarea.form-input{resize:none;height:90px}@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}.js .fade-up{opacity:0;transform:translateY(16px);transition:opacity 0.65s ease,transform 0.65s ease}.js .fade-up.visible{opacity:1;transform:translateY(0)}@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.js .fade-up{opacity:1;transform:none;transition:none}}@media (max-width:768px){.nav{padding:0 1.5rem}.nav-links{display:none}.nav-hamburger{display:flex}}</style>
+<link rel="preload" href="/css/style.css?v=20261103" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="/css/style.css?v=20261103"></noscript>
   <!-- Google Analytics -->
 <script>
   (function () {
@@ -683,6 +686,8 @@
     <div class="hero-right">
       <img class="hero-img"
         src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=1000&q=80&fit=crop&auto=format"
+        srcset="https://images.unsplash.com/photo-1448375240586-882707db888b?w=480&amp;q=80&amp;fit=crop&amp;auto=format 480w, https://images.unsplash.com/photo-1448375240586-882707db888b?w=800&amp;q=80&amp;fit=crop&amp;auto=format 800w, https://images.unsplash.com/photo-1448375240586-882707db888b?w=1200&amp;q=80&amp;fit=crop&amp;auto=format 1200w, https://images.unsplash.com/photo-1448375240586-882707db888b?w=1600&amp;q=80&amp;fit=crop&amp;auto=format 1600w"
+        sizes="(max-width: 900px) 100vw, 50vw"
         alt="Pacific Northwest forest, British Columbia"
         width="1000" height="667"
         loading="eager"
@@ -712,9 +717,11 @@
     </div>
     <div class="about-img-wrap has-portrait">
       <picture>
-        <source srcset="/img/hilary-mckee.webp" type="image/webp">
+        <source srcset="/img/hilary-mckee-400.webp 400w, /img/hilary-mckee.webp 800w" sizes="(max-width: 900px) 100vw, 50vw" type="image/webp">
         <img class="about-img portrait"
           src="/img/hilary-mckee.jpg"
+          srcset="/img/hilary-mckee-400.jpg 400w, /img/hilary-mckee.jpg 800w"
+          sizes="(max-width: 900px) 100vw, 50vw"
           alt="Hilary McKee, emerging psychotherapist in Vancouver, BC, sitting in a leather chair and smiling"
           width="800" height="1200"
           loading="lazy" decoding="async">
@@ -740,6 +747,8 @@
       <a class="blog-card featured" href="/nervous-system">
         <img class="blog-img"
           src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=700&q=70&fit=crop&crop=top&auto=format"
+        srcset="https://images.unsplash.com/photo-1448375240586-882707db888b?w=400&amp;q=70&amp;fit=crop&amp;crop=top&amp;auto=format 400w, https://images.unsplash.com/photo-1448375240586-882707db888b?w=600&amp;q=70&amp;fit=crop&amp;crop=top&amp;auto=format 600w, https://images.unsplash.com/photo-1448375240586-882707db888b?w=800&amp;q=70&amp;fit=crop&amp;crop=top&amp;auto=format 800w"
+        sizes="(max-width: 900px) calc(100vw - 3rem), 40vw"
           alt="Pacific Northwest forest"
           loading="lazy" decoding="async">
         <div class="blog-body">
@@ -753,7 +762,9 @@
         </div>
       </a>
       <a class="blog-card" href="/ifs-parts-work">
-        <img class="blog-img" src="https://images.unsplash.com/photo-1518173946687-a4c8892bbd9f?w=500&q=70&fit=crop&auto=format" alt="Forest light" loading="lazy" decoding="async">
+        <img class="blog-img" src="https://images.unsplash.com/photo-1518173946687-a4c8892bbd9f?w=500&q=70&fit=crop&auto=format"
+        srcset="https://images.unsplash.com/photo-1518173946687-a4c8892bbd9f?w=400&amp;q=70&amp;fit=crop&amp;auto=format 400w, https://images.unsplash.com/photo-1518173946687-a4c8892bbd9f?w=600&amp;q=70&amp;fit=crop&amp;auto=format 600w, https://images.unsplash.com/photo-1518173946687-a4c8892bbd9f?w=800&amp;q=70&amp;fit=crop&amp;auto=format 800w"
+        sizes="(max-width: 900px) calc(100vw - 3rem), 27vw" alt="Forest light" loading="lazy" decoding="async">
         <div class="blog-body">
           <span class="blog-tag">IFS & Parts Work</span>
           <h3 class="blog-title">What is IFS therapy? A clear guide to <em>parts work</em></h3>
@@ -767,6 +778,8 @@
       <a class="blog-card" href="/choosing-a-therapist">
         <img class="blog-img"
           src="https://images.unsplash.com/photo-1716300717883-915fef35a46d?w=500&q=70&fit=crop&auto=format"
+        srcset="https://images.unsplash.com/photo-1716300717883-915fef35a46d?w=400&amp;q=70&amp;fit=crop&amp;auto=format 400w, https://images.unsplash.com/photo-1716300717883-915fef35a46d?w=600&amp;q=70&amp;fit=crop&amp;auto=format 600w, https://images.unsplash.com/photo-1716300717883-915fef35a46d?w=800&amp;q=70&amp;fit=crop&amp;auto=format 800w"
+        sizes="(max-width: 900px) calc(100vw - 3rem), 27vw"
           alt="A small couch and armchair in a counselling office"
           loading="lazy" decoding="async">
         <div class="blog-body">
@@ -870,6 +883,6 @@
   <span class="footer-copy">© 2026 · Vancouver, BC · hilarymckee.ca</span>
 </footer>
 
-<script src="/js/main.js"></script>
+<script src="/js/main.js?v=20261103"></script>
 </body>
 </html>

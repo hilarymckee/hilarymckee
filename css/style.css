@@ -260,14 +260,19 @@ textarea.form-input { resize: none; height: 90px; }
   from { opacity: 0; transform: translateY(16px); }
   to { opacity: 1; transform: translateY(0); }
 }
-.fade-up {
+/* Only hidden once main.js has run (html.js), so content shows if JS fails */
+.js .fade-up {
   opacity: 0;
   transform: translateY(16px);
   transition: opacity 0.65s ease, transform 0.65s ease;
 }
-.fade-up.visible {
+.js .fade-up.visible {
   opacity: 1;
   transform: translateY(0);
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .js .fade-up { opacity: 1; transform: none; transition: none; }
 }
 
 /* â”€â”€ READING PROGRESS â”€â”€ */

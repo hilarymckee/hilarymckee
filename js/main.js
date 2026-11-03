@@ -1,6 +1,9 @@
 // Hilary McKee — hilarymckee.ca
 // Shared site scripts
 
+// Enables scroll-reveal styles only when this script runs
+document.documentElement.classList.add('js');
+
 document.addEventListener('DOMContentLoaded', function () {
 
   // ── NAV SCROLL SHADOW ──
@@ -30,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   // ── FADE UP ON SCROLL ──
-  const observer = new IntersectionObserver((entries) => {
+  const observer = 'IntersectionObserver' in window && new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('visible');
@@ -39,7 +42,11 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }, { threshold: 0.08 });
 
-  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+  if ('IntersectionObserver' in window) {
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+  } else {
+    document.querySelectorAll('.fade-up').forEach(el => el.classList.add('visible'));
+  }
 
   // ── READING PROGRESS (blog posts only) ──
   const progress = document.querySelector('.reading-progress');
