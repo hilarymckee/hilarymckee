@@ -51,6 +51,54 @@
   "description": "Clear, practical guides to therapy in BC: how it works, the different approaches, and how to find the right therapist for you. By Hilary McKee, Vancouver."
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I find the right therapist in BC?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Start with what you'd like help with and whether you'd prefer to meet in person or online. Read a few profiles, then book a short consultation if one is offered. Training and approach matter, but research consistently shows that the relationship itself matters most, so pay attention to whether you feel safe and understood. My guide on choosing a therapist walks through what to ask."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the difference between a counsellor, psychotherapist and psychologist in BC?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "These titles mean different things in BC, both in training and in how they're regulated, and some will change when counselling becomes a regulated profession. Knowing the difference can help you check credentials and understand what your benefits cover."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does therapy cost, and are there low-cost options?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "MSP doesn't cover private counselling, but there are free and low-cost options across BC, including community counselling programs, training clinics with supervised student counsellors, and sliding scale fees. Many extended health plans also cover counselling."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens in a first therapy session?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most first sessions are a chance to talk about what brings you in, what you're hoping for and a bit of your history. You don't need to know what to say or have everything figured out. It's also a chance to ask your own questions and notice how it feels to talk with this person."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which type of therapy is right for me?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Many approaches can help, from talk therapy to EMDR, IFS and body-based work. The guides on this site explain how each one works so you can get a feel for what might suit you. If you're unsure, a good therapist can help you figure it out together."
+      }
+    }
+  ]
+}
+</script>
 <link rel="icon" type="image/png" href="/favicon-512.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -439,17 +487,20 @@
     inset: 0;
     background: radial-gradient(ellipse 80% 60% at 50% 110%, rgba(184,90,56,0.15) 0%, transparent 65%);
   }
-  .quote-bg {
+  .quote-section::after {
+    content: '';
     position: absolute;
     inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    z-index: 0;
+    background-image: url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1400&q=50&fit=crop&auto=format');
+    background-size: cover;
+    background-position: center;
     opacity: 0.06;
     filter: saturate(0) brightness(0.4);
   }
   .quote-inner {
     position: relative;
+    z-index: 1;
     max-width: 580px;
     margin: 0 auto;
   }
@@ -504,6 +555,46 @@
   .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
   .form-note { font-size: 13px; color: var(--text-muted); line-height: 1.6; }
 
+  /* ── FAQ ── */
+  .faq {
+    padding: 5rem 3.5rem;
+    background: var(--cream);
+    border-top: 0.5px solid var(--border);
+  }
+  .faq .resources-h2 { margin-bottom: 2rem; }
+  .faq-list { max-width: 760px; border-top: 0.5px solid var(--border); }
+  .faq-item { border-bottom: 0.5px solid var(--border); }
+  .faq-item summary {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 21px;
+    font-weight: 400;
+    color: var(--text-dark);
+    line-height: 1.3;
+    padding: 1.1rem 2rem 1.1rem 0;
+    cursor: pointer;
+    list-style: none;
+    position: relative;
+    transition: color 0.2s;
+  }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary::after {
+    content: '+';
+    position: absolute;
+    right: 0.25rem;
+    top: 1.05rem;
+    font-family: 'Jost', sans-serif;
+    font-weight: 300;
+    color: var(--terra);
+  }
+  .faq-item[open] summary::after { content: '\2212'; }
+  .faq-item summary:hover { color: var(--terra); }
+  .faq-item p {
+    font-size: 15px;
+    color: var(--text-body);
+    line-height: 1.8;
+    padding: 0 2rem 1.4rem 0;
+  }
+
   /* ── MOBILE ── */
   @media (max-width: 900px) {
     .hero { grid-template-columns: 1fr; min-height: auto; }
@@ -520,6 +611,7 @@
     .newsletter { grid-template-columns: 1fr; gap: 2.5rem; padding: 4rem 1.5rem; }
     .form-row { grid-template-columns: 1fr; }
     .quote-section { padding: 5rem 1.5rem; }
+    .faq { padding: 4rem 1.5rem; }
   }
   .about-img.portrait { filter: none; mix-blend-mode: normal; object-position: center 22%; }
   .about-img-wrap.has-portrait .about-img-overlay, .about-img-wrap.has-portrait .about-img-caption { display: none; }
@@ -674,11 +766,6 @@
 
   <!-- QUOTE -->
   <section class="quote-section">
-    <img class="quote-bg"
-      src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1400&q=50&fit=crop&auto=format"
-      alt=""
-      loading="lazy" decoding="async"
-      aria-hidden="true">
     <div class="quote-inner fade-up">
       <span class="quote-mark">"</span>
       <p class="quote-text">The most important thing I can offer a client is the certainty that <em>they will not be too much</em> for this room.</p>
@@ -707,6 +794,34 @@
       <button class="btn" type="submit">Join the list</button>
       <p class="form-note">No spam. Unsubscribe any time.</p>
     </form>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq" id="faq">
+    <p class="eyebrow fade-up">FAQ</p>
+    <h2 class="resources-h2 fade-up">Questions about starting <em>therapy.</em></h2>
+    <div class="faq-list fade-up">
+      <details class="faq-item">
+        <summary>How do I find the right therapist in BC?</summary>
+        <p>Start with what you'd like help with and whether you'd prefer to meet in person or online. Read a few profiles, then book a short consultation if one is offered. Training and approach matter, but research consistently shows that the relationship itself matters most, so pay attention to whether you feel safe and understood. My guide on <a href="/choosing-a-therapist">choosing a therapist</a> walks through what to ask.</p>
+      </details>
+      <details class="faq-item">
+        <summary>What's the difference between a counsellor, psychotherapist and psychologist in BC?</summary>
+        <p>These titles <a href="/counsellor-psychotherapist-psychologist-bc">mean different things in BC</a>, both in training and in how they're regulated, and some will change when counselling becomes a regulated profession. Knowing the difference can help you check credentials and understand what your benefits cover.</p>
+      </details>
+      <details class="faq-item">
+        <summary>How much does therapy cost, and are there low-cost options?</summary>
+        <p>MSP doesn't cover private counselling, but there are <a href="/low-cost-counselling-bc">free and low-cost options across BC</a>, including community counselling programs, training clinics with supervised student counsellors, and sliding scale fees. Many extended health plans also cover counselling.</p>
+      </details>
+      <details class="faq-item">
+        <summary>What happens in a first therapy session?</summary>
+        <p>Most first sessions are a chance to talk about what brings you in, what you're hoping for and a bit of your history. You don't need to know what to say or have everything figured out. It's also a chance to ask your own questions and notice how it feels to talk with this person.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Which type of therapy is right for me?</summary>
+        <p>Many approaches can help, from talk therapy to EMDR, IFS and body-based work. The guides on this site explain how each one works so you can get a feel for what might suit you. If you're unsure, a good therapist can help you figure it out together.</p>
+      </details>
+    </div>
   </section>
 
 </main>
