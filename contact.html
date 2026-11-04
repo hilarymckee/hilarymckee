@@ -231,7 +231,7 @@
         <div class="contact-detail">Vancouver, BC</div>
         <div class="contact-detail">Virtual sessions available across British Columbia</div>
         <div class="contact-detail">Virtual sessions available across Canada</div>
-        <div class="contact-detail">hello@hilarymckee.ca</div>
+        <div class="contact-detail"><a href="mailto:hello@hilarymckee.ca">hello@hilarymckee.ca</a></div>
       </div>
       <p class="contact-note">Please note: I am not yet a registered therapist and am unable to provide clinical advice or crisis support through this form. If you are in crisis, please contact the BC Crisis Line at 1-800-784-2433 or visit a local emergency room.</p>
     </div>
@@ -253,7 +253,7 @@
           <textarea class="form-input" id="contact-message" name="message" placeholder="What's on your mind? No pressure to share everything." required></textarea>
         </div>
         <button class="btn" type="submit">Send message</button>
-        <p class="form-note">For media enquiries, collaboration requests, or general questions about my writing — email is also welcome at hello@hilarymckee.ca</p>
+        <p class="form-note">For media enquiries, collaboration requests, or general questions about my writing, email is also welcome at <a href="mailto:hello@hilarymckee.ca">hello@hilarymckee.ca</a>.</p>
       </form>
     </div>
   </div>
@@ -315,7 +315,7 @@
       }).catch(() => {
         const error = document.createElement('p');
         error.className = 'form-status';
-        error.textContent = 'Something went wrong. Please try again, or email me directly.';
+        error.textContent = 'Something went wrong. Please try again, or email me at hello@hilarymckee.ca.';
         if (button) {
           button.disabled = false;
           button.insertAdjacentElement('afterend', error);
