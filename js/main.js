@@ -18,8 +18,19 @@ document.addEventListener('DOMContentLoaded', function () {
   const hamburger = document.querySelector('.nav-hamburger');
   const navLinks = document.querySelector('.nav-links');
   if (hamburger && navLinks) {
+    const setMenu = (open) => {
+      navLinks.classList.toggle('open', open);
+      hamburger.setAttribute('aria-expanded', open ? 'true' : 'false');
+      hamburger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    };
     hamburger.addEventListener('click', () => {
-      navLinks.classList.toggle('open');
+      setMenu(!navLinks.classList.contains('open'));
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && navLinks.classList.contains('open')) {
+        setMenu(false);
+        hamburger.focus();
+      }
     });
   }
 
