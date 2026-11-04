@@ -161,23 +161,6 @@ h1, h2, h3 {
 }
 .btn-outline:hover { background: var(--terra); color: var(--cream); }
 
-/* â”€â”€ TAGS â”€â”€ */
-.tag-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-}
-.tag {
-  font-size: 12px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  padding: 5px 12px;
-  border: 0.5px solid var(--border);
-  color: var(--text-muted);
-  font-family: 'Jost', sans-serif;
-  font-weight: 400;
-}
-
 /* â”€â”€ SECTIONS â”€â”€ */
 .section-cream { background: var(--cream); }
 .section-linen { background: var(--cream-dark); }
