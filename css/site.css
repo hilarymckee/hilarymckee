@@ -310,7 +310,6 @@ h1,h2,h3,p,ul,ol,dl,dd,figure,blockquote{margin:0}
 
 /* about page */
 .photo-stack{position:relative}
-.sticker{position:absolute;right:-44px;bottom:-40px;width:50%;aspect-ratio:1/1;object-fit:cover;border:var(--line);border-radius:16px;transform:rotate(5deg);box-shadow:-8px 8px 0 var(--pink)}
 .fit-sec{border-top:var(--line);border-bottom:var(--line);background:var(--green);padding:104px 0}
 .fit-list{flex:1.4 1 480px;min-width:0;list-style:none;padding:0;border-bottom:var(--line);font-size:21px;line-height:1.45}
 .fit-list li{display:flex;gap:16px;align-items:flex-start;padding:18px 0;border-top:var(--line)}
@@ -330,7 +329,7 @@ h1,h2,h3,p,ul,ol,dl,dd,figure,blockquote{margin:0}
 .belief{flex:1 1 440px;min-width:0;border:var(--line);border-radius:24px;padding:44px}
 .belief h2{font-family:var(--head);font-weight:800;text-transform:uppercase;letter-spacing:-.02em;line-height:.95;font-size:44px}
 .belief p:last-child{margin-top:24px;font-size:20px;line-height:1.65}
-@media (max-width:820px){.sticker{right:-8px;bottom:-24px;width:42%}.belief{padding:30px 24px}.belief h2{font-size:34px}.band-card{font-size:30px;padding:22px 24px}.band{min-height:420px}.fit-list{font-size:19px}}
+@media (max-width:820px){.belief{padding:30px 24px}.belief h2{font-size:34px}.band-card{font-size:30px;padding:22px 24px}.band{min-height:420px}.fit-list{font-size:19px}}
 
 /* contact page */
 .details-list{list-style:none;padding:0;margin:24px 0;border-bottom:var(--line)}
@@ -361,4 +360,3 @@ h1,h2,h3,p,ul,ol,dl,dd,figure,blockquote{margin:0}
 .myth-end p,.card h3,.myth .text,.band-card,.guide-list a,.faq-item summary{overflow-wrap:break-word;hyphens:auto}
 @media (max-width:360px){.myth-end p,.card h3{font-size:23px}.display{font-size:48px}.band-card{font-size:26px}}
 .hero{overflow-x:clip}
-@media (max-width:1240px){.sticker{right:-12px}}
