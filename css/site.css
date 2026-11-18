@@ -365,3 +365,8 @@ h1,h2,h3,p,ul,ol,dl,dd,figure,blockquote{margin:0}
 
 /* Guides heading keeps "Plain-language" on one line: size it to fit small screens */
 @media (max-width:820px){.display.guides-h1{font-size:min(56px,12vw)}}
+/* homepage counselling section: body copy in the homepage paragraph style */
+.section-copy p{font-size:21px;line-height:1.6}
+.section-copy p+p{margin-top:20px}
+.section-copy a{font-weight:500}
+@media (max-width:820px){.section-copy p{font-size:19px}}
