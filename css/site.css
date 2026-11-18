@@ -98,7 +98,7 @@ h1,h2,h3,p,ul,ol,dl,dd,figure,blockquote{margin:0}
 .on-dark .muted,.muted-dark{color:var(--muted-dark)}
 .lazy-bg{background-color:var(--dark);background-size:cover;background-position:center}
 .bg-forest.bg-in{background-image:linear-gradient(rgba(31,61,43,.8),rgba(31,61,43,.8)),url(/images/forest.webp)}
-.bg-palm.bg-in{background-image:linear-gradient(rgba(31,61,43,.86),rgba(31,61,43,.86)),url(/images/palm.webp)}
+.bg-pnw.bg-in{background-image:linear-gradient(rgba(31,61,43,.86),rgba(31,61,43,.86)),url(/images/forest.webp);background-position:center 70%}
 .bg-mountains{background-color:#7d8a78;background-position:center 40%}
 .bg-mountains.bg-in{background-image:url(/images/mountains.webp)}
 .bg-autumn{background-color:#8a5a3a}
