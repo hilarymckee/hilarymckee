@@ -370,3 +370,6 @@ h1,h2,h3,p,ul,ol,dl,dd,figure,blockquote{margin:0}
 .section-copy p+p{margin-top:20px}
 .section-copy a{font-weight:500}
 @media (max-width:820px){.section-copy p{font-size:19px}}
+/* pill buttons inside article text keep dark text on coral */
+.prose .btn{color:var(--ink);text-decoration:none}
+.prose .cta-row{margin:28px 0 36px}
